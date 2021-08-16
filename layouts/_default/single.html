@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+
+<div class="content">
+  <article>
+    <h1>{{ .Title }}</h1>
+    <h2>{{ range .Params.tags }} <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/"></a> {{ end }}</h2>
+
+    {{ if .Params.toc }}
+    <div class="toc">
+      {{ .TableOfContents }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.series }}
+    <div class="series">
+      This post is part of the
+      {{ range .Params.series }}
+      <a href="/series/{{ . | urlize }}">{{ . }}</a>
+      {{ end }}
+      series.
+    </div>
+    {{ end }}
+
+    {{ .Content }}
+  </article>
+  <aside>
+    <a href="{{ .Permalink }}">Published <time class="dt-published">{{ .Params.date.Format "2 January, 2006" }}</time> by <a rel="author" href="{{ .Site.BaseURL }}author/{{urlize .Params.author}} ">{{ .Params.author }}</a>
+    Last modified on {{ .Lastmod.Format "2 January, 2006"}}.
+  </aside>
+</div>
+
+{{ partial "footer.html" . }}
