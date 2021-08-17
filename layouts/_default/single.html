@@ -3,7 +3,7 @@
 <div class="content">
   <article>
     <h1>{{ .Title }}</h1>
-    <h2>{{ range .Params.tags }} <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/"></a> {{ end }}</h2>
+    <h2>{{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a> {{ end }}</h2>
 
     {{ if .Params.toc }}
     <div class="toc">
