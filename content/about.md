@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2021-08-16T18:42:39+02:00
-draft: false
+author: "joergmis"
 ---
 
 > It is to burn with a passion.

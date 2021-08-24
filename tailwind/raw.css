@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.heading2 {
+    font-size: 3rem;
+    font-family: Volte-Bold;
+    font-weight: 400;
+}
+
+.paragraph {
+    font-size: 1.5rem;
+    font-family: Volte-Medium;
+    font-weight: 400;
+}
+
+@layer base {
+    @font-face {
+        font-family: 'Volte-Bold';
+        src: url('./assets/fonts/Volte-Bold.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'Volte-BoldItalic';
+        src: url('./assets/fonts/Volte-BoldItalic.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'Volte-Light';
+        src: url('./assets/fonts/Volte-Light.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'Volte-LightItalic';
+        src: url('./assets/fonts/Volte-LightItalic.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'Volte-Medium';
+        src: url('./assets/fonts/Volte-Medium.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'Volte-MediumItalic';
+        src: url('./assets/fonts/Volte-MediumItalic.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'Volte-Regular';
+        src: url('./assets/fonts/Volte-Regular.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'Volte-RegularItalic';
+        src: url('./assets/fonts/Volte-RegularItalic.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'Volte-Semibold';
+        src: url('./assets/fonts/Volte-Semibold.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'Volte-SemiboldItalic';
+        src: url('./assets/fonts/Volte-SemiboldItalic.otf') format('opentype');
+    }
+    h2 {
+        font-size: 1.75rem !important;
+        font-family: Volte-Semibold !important;
+        margin-bottom: 0.75rem !important;
+        font-weight: normal !important;
+    }
+    p,
+    label,
+    span,
+    a,
+    button {
+        font-size: 1rem !important;
+        font-family: Volte-Medium !important;
+        line-height: 1.1rem;
+        font-weight: normal !important;
+    }
+}
