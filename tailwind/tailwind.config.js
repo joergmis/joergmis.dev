@@ -8,7 +8,7 @@ module.exports = {
                 'scewo-blue-stop': '#70D2FF',
             },
             fontFamily: {
-                sans: ['Volte-Regular', ...defaultTheme.fontFamily.sans],
+                sans: ['RedHatDisplay', ...defaultTheme.fontFamily.sans],
             },
         },
     },

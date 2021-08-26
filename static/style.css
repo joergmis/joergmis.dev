@@ -373,7 +373,7 @@ ul {
  */
 
 html {
-  font-family: Volte-Regular, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: RedHatDisplay, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 1 */
   line-height: 1.5;
   /* 2 */
@@ -753,81 +753,74 @@ select {
 }
 
 @font-face {
-  font-family: 'Volte-Bold';
+  font-family: 'RedHatDisplay-Black';
 
-  src: url('./assets/fonts/Volte-Bold.otf') format('opentype');
+  src: url('/fonts/RedHatDisplay-Black.ttf') ;
 }
 
 @font-face {
-  font-family: 'Volte-BoldItalic';
+  font-family: 'RedHatDisplay-BlackItalic';
 
-  src: url('./assets/fonts/Volte-BoldItalic.otf') format('opentype');
+  src: url('/fonts/RedHatDisplay-BlackItalic.ttf') ;
 }
 
 @font-face {
-  font-family: 'Volte-Light';
+  font-family: 'RedHatDisplay-Bold';
 
-  src: url('./assets/fonts/Volte-Light.otf') format('opentype');
+  src: url('/fonts/RedHatDisplay-Bold.ttf') ;
 }
 
 @font-face {
-  font-family: 'Volte-LightItalic';
+  font-family: 'RedHatDisplay-BoldItalic';
 
-  src: url('./assets/fonts/Volte-LightItalic.otf') format('opentype');
+  src: url('/fonts/RedHatDisplay-BoldItalic.ttf') ;
 }
 
 @font-face {
-  font-family: 'Volte-Medium';
+  font-family: 'RedHatDisplay-Medium';
 
-  src: url('./assets/fonts/Volte-Medium.otf') format('opentype');
+  src: url('/fonts/RedHatDisplay-Medium.ttf') ;
 }
 
 @font-face {
-  font-family: 'Volte-MediumItalic';
+  font-family: 'RedHatDisplay-MediumItalic';
 
-  src: url('./assets/fonts/Volte-MediumItalic.otf') format('opentype');
+  src: url('/fonts/RedHatDisplay-MediumItalic.ttf') ;
 }
 
 @font-face {
-  font-family: 'Volte-Regular';
+  font-family: 'RedHatDisplay-Regular';
 
-  src: url('./assets/fonts/Volte-Regular.otf') format('opentype');
+  src: url('/fonts/RedHatDisplay-Regular.ttf') ;
 }
 
 @font-face {
-  font-family: 'Volte-RegularItalic';
+  font-family: 'RedHatDisplay-Italic';
 
-  src: url('./assets/fonts/Volte-RegularItalic.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Volte-Semibold';
-
-  src: url('./assets/fonts/Volte-Semibold.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Volte-SemiboldItalic';
-
-  src: url('./assets/fonts/Volte-SemiboldItalic.otf') format('opentype');
+  src: url('/fonts/RedHatDisplay-Italic.ttf') ;
 }
 
 h2 {
-  font-size: 1.75rem !important;
-  font-family: Volte-Semibold !important;
+  font-size: 1.5rem !important;
+  font-family: RedHatDisplay-Bold !important;
   margin-bottom: 0.75rem !important;
   font-weight: normal !important;
 }
 
 p,
+    div,
     label,
     span,
     a,
     button {
   font-size: 1rem !important;
-  font-family: Volte-Medium !important;
+  font-family: RedHatDisplay-Medium !important;
   line-height: 1.1rem;
-  font-weight: normal !important;
+}
+
+,
+    p {
+  margin-bottom: 1rem !important;
 }
 
 .container {
@@ -22787,7 +22780,7 @@ p,
 }
 
 .font-sans {
-  font-family: Volte-Regular, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: RedHatDisplay, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-serif {
@@ -32832,18 +32825,6 @@ p,
 
 .content-none {
   content: none;
-}
-
-.heading2 {
-  font-size: 3rem;
-  font-family: Volte-Bold;
-  font-weight: 400;
-}
-
-.paragraph {
-  font-size: 1.5rem;
-  font-family: Volte-Medium;
-  font-weight: 400;
 }
 
 @media (min-width: 640px) {
@@ -54738,7 +54719,7 @@ p,
   }
 
   .sm\:font-sans {
-    font-family: Volte-Regular, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: RedHatDisplay, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .sm\:font-serif {
@@ -86317,7 +86298,7 @@ p,
   }
 
   .md\:font-sans {
-    font-family: Volte-Regular, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: RedHatDisplay, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .md\:font-serif {
@@ -117896,7 +117877,7 @@ p,
   }
 
   .lg\:font-sans {
-    font-family: Volte-Regular, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: RedHatDisplay, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .lg\:font-serif {
@@ -149475,7 +149456,7 @@ p,
   }
 
   .xl\:font-sans {
-    font-family: Volte-Regular, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: RedHatDisplay, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .xl\:font-serif {
@@ -181054,7 +181035,7 @@ p,
   }
 
   .\32xl\:font-sans {
-    font-family: Volte-Regular, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: RedHatDisplay, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .\32xl\:font-serif {

@@ -1,73 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.heading2 {
-    font-size: 3rem;
-    font-family: Volte-Bold;
-    font-weight: 400;
-}
 
-.paragraph {
-    font-size: 1.5rem;
-    font-family: Volte-Medium;
-    font-weight: 400;
-}
 
 @layer base {
+  @font-face {
+    font-family: 'RedHatDisplay-Black';
+    src: url('/fonts/RedHatDisplay-Black.ttf') ;
+  }
+  @font-face {
+    font-family: 'RedHatDisplay-BlackItalic';
+    src: url('/fonts/RedHatDisplay-BlackItalic.ttf') ;
+  }
+
     @font-face {
-        font-family: 'Volte-Bold';
-        src: url('./assets/fonts/Volte-Bold.otf') format('opentype');
+        font-family: 'RedHatDisplay-Bold';
+        src: url('/fonts/RedHatDisplay-Bold.ttf') ;
     }
     @font-face {
-        font-family: 'Volte-BoldItalic';
-        src: url('./assets/fonts/Volte-BoldItalic.otf') format('opentype');
+        font-family: 'RedHatDisplay-BoldItalic';
+        src: url('/fonts/RedHatDisplay-BoldItalic.ttf') ;
     }
     @font-face {
-        font-family: 'Volte-Light';
-        src: url('./assets/fonts/Volte-Light.otf') format('opentype');
+        font-family: 'RedHatDisplay-Medium';
+        src: url('/fonts/RedHatDisplay-Medium.ttf') ;
     }
     @font-face {
-        font-family: 'Volte-LightItalic';
-        src: url('./assets/fonts/Volte-LightItalic.otf') format('opentype');
+        font-family: 'RedHatDisplay-MediumItalic';
+        src: url('/fonts/RedHatDisplay-MediumItalic.ttf') ;
     }
     @font-face {
-        font-family: 'Volte-Medium';
-        src: url('./assets/fonts/Volte-Medium.otf') format('opentype');
+        font-family: 'RedHatDisplay-Regular';
+        src: url('/fonts/RedHatDisplay-Regular.ttf') ;
     }
     @font-face {
-        font-family: 'Volte-MediumItalic';
-        src: url('./assets/fonts/Volte-MediumItalic.otf') format('opentype');
-    }
-    @font-face {
-        font-family: 'Volte-Regular';
-        src: url('./assets/fonts/Volte-Regular.otf') format('opentype');
-    }
-    @font-face {
-        font-family: 'Volte-RegularItalic';
-        src: url('./assets/fonts/Volte-RegularItalic.otf') format('opentype');
-    }
-    @font-face {
-        font-family: 'Volte-Semibold';
-        src: url('./assets/fonts/Volte-Semibold.otf') format('opentype');
-    }
-    @font-face {
-        font-family: 'Volte-SemiboldItalic';
-        src: url('./assets/fonts/Volte-SemiboldItalic.otf') format('opentype');
+        font-family: 'RedHatDisplay-Italic';
+        src: url('/fonts/RedHatDisplay-Italic.ttf') ;
     }
     h2 {
-        font-size: 1.75rem !important;
-        font-family: Volte-Semibold !important;
+        font-size: 1.5rem !important;
+        font-family: RedHatDisplay-Bold !important;
         margin-bottom: 0.75rem !important;
         font-weight: normal !important;
     }
     p,
+    div,
     label,
     span,
     a,
     button {
         font-size: 1rem !important;
-        font-family: Volte-Medium !important;
+        font-family: RedHatDisplay-Medium !important;
         line-height: 1.1rem;
-        font-weight: normal !important;
+    },
+    p {
+      margin-bottom: 1rem !important;
     }
 }
