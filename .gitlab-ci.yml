@@ -1,5 +1,6 @@
 build:
   image: alpine:3.9
+  when: manual
   stage: build
   variables:
     VERSION: 0.55.6
