@@ -3,6 +3,8 @@
 <div>
   <article>
     <h1>{{ .Title }}</h1>
+
+    <h2>{{ .Params.tldr }}</h2>
     <div>
       {{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a> {{ end }}
     </div>
@@ -26,12 +28,10 @@
     {{ .Content }}
   </article>
   <div>
-    Published <time>{{ .Params.date.Format "2 January, 2006" }}</time> by <a rel="author"
-      href="{{ .Site.BaseURL }}author/{{urlize .Params.author}} ">{{ .Params.author }}</a>
+    <small>Published <time>{{ .Params.date.Format "2 January, 2006" }}</time> /
+      last modified on <time>{{ .Lastmod.Format "2 January, 2006"}}</time>.</small>
   </div>
-  <div>
-    Last modified on {{ .Lastmod.Format "2 January, 2006"}}.
-  </div>
+
 </div>
 
 {{ partial "footer.html" . }}

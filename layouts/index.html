@@ -7,16 +7,22 @@
   </article>
 
   <div>
-    <h2>Recent blogposts</h2>
+    <h2>Latest <small><a href="/posts">(Index)</a></small></h2>
     <ul>
-      {{ range first 3 ( where .Site.Pages "Type" "blog" )}}
+      {{ range first 5 ( where .Site.Pages "Type" "blog" )}}
       <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
       {{ end }}
     </ul>
   </div>
 
   <div>
-    <h2>Zettelkasten</h2>
+    <h2>Zettelkasten <small><a href="/zettelkasten">(Index)</a></small></h2>
+    <ul>
+      {{ range first 5 ( where .Site.Pages "Type" "zettel" )}}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+
   </div>
 </div>
 

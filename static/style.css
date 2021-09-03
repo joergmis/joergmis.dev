@@ -1,11 +1,145 @@
-html,
-body {
+/*
+colors
+
+#2F435A
+#AB6B51
+#D0B49F
+#39918C
+
+*/
+
+@font-face {
+  font-family: FiraSans-Black;
+  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Black;
+  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Black;
+  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Black;
+  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Black;
+  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-BlackItalic;
+  src: url(/fonts/FiraSans-BlackItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Bold;
+  src: url(/fonts/FiraSans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-BoldItalic;
+  src: url(/fonts/FiraSans-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-ExtraBold;
+  src: url(/fonts/FiraSans-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-ExtraBoldItalic;
+  src: url(/fonts/FiraSans-ExtraBoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-ExtraLight;
+  src: url(/fonts/FiraSans-ExtraLight.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-ExtraLightItalic;
+  src: url(/fonts/FiraSans-ExtraLightItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Italic;
+  src: url(/fonts/FiraSans-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Light;
+  src: url(/fonts/FiraSans-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-LightItalic;
+  src: url(/fonts/FiraSans-LightItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Medium;
+  src: url(/fonts/FiraSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-MediumItalic;
+  src: url(/fonts/FiraSans-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Regular;
+  src: url(/fonts/FiraSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-SemiBold;
+  src: url(/fonts/FiraSans-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-SemiBoldItalic;
+  src: url(/fonts/FiraSans-SemiBoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-Thin;
+  src: url(/fonts/FiraSans-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FiraSans-ThinItalic;
+  src: url(/fonts/FiraSans-ThinItalic.ttf) format("truetype");
+}
+
+html, body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: FiraSans-Regular;
+  font-size: 1rem;
   line-height: 1.5;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1;
+  font-family: FiraSans-SemiBold;
+  margin-top: 2rem;
+}
+
+h2, h3 {
+  font-size: 1.2rem;
+  line-height: 1.1;
+  font-family: FiraSans-Medium;
+  margin-top: 2rem;
 }
 
 * {
@@ -16,19 +150,25 @@ body {
   margin: 16px;
 }
 
-header,
-main {
-  max-width: 800px;
+header, main {
+  max-width: 600px;
   margin: auto;
   padding: 0.5rem 2rem;
 }
 
 pre {
-  background-color: #eee;
-  padding: 4px;
+  background-color: #eee !important;
+  color: black;
+  padding: 8px;
   overflow: auto;
+  border-radius: 2px;
 }
 
 code {
-  background-color: #eee;
+  background-color: #eee !important;
+  color: black;
+}
+
+a {
+  color: #39918C;
 }

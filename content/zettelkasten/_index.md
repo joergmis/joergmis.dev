@@ -5,6 +5,11 @@ lastmod: 2021-09-03
 author: "joergmis"
 ---
 
-Description of zettelkasten.
+## Intro
 
-Zettels:
+[Zettelkasten](https://zettelkasten.de/introduction/) is a system of note taking
+and organisation that builds a network of ideas. The focus lies on the 
+connection of the zettels - every new zettel should be referenced from another
+zettel. The idea here is to relate knowledge.
+
+## Index
