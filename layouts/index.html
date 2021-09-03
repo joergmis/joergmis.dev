@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+<div>
+  <article>
+    {{ if .Title }}<h1>{{ .Title }}</h1>{{ end }}
+    {{ .Content }}
+  </article>
+
+  <div>
+    <h2>Recent blogposts</h2>
+    <ul>
+      {{ range first 3 ( where .Site.Pages "Type" "blog" )}}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div>
+    <h2>Zettelkasten</h2>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}

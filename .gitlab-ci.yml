@@ -1,0 +1,26 @@
+build:
+  image: alpine:3.9
+  stage: build
+  variables:
+    VERSION: 0.55.6
+  script:
+    - curl --location --output hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz"
+    - tar -zxvf hugo.tar.gz
+    - hugo
+  artifacts:
+    paths:
+      - public/
+    expire_in: 1 day
+
+deploy:
+  image: ubuntu:latest
+  stage: deploy
+  needs: [build]
+  script:
+  - apt-get update -yqq
+  - apt-get install -yqq lftp ca-certificates
+  - update-ca-certificates
+  - lftp -e "open $FTP_HOST; user $FTP_USER $FTP_PW; mkdir -f staging; mirror -X .* -X .*/ --reverse --verbose --delete public/ .; bye"
+  environment:
+    name: production
+    url: https://ninetyfour.ch

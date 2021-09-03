@@ -1,0 +1,10 @@
+baseURL: "https://ninetyfour.ch/"
+languageCode: "en-us"
+title: "tales of meandering code"
+
+menu:
+  main:
+    - name: Blogposts
+      url: /posts
+    - name: Zettelkasten
+      url: /zettelkasten

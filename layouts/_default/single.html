@@ -1,18 +1,20 @@
 {{ partial "header.html" . }}
 
-<div class="content">
+<div>
   <article>
     <h1>{{ .Title }}</h1>
-    <h2>{{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a> {{ end }}</h2>
+    <div>
+      {{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a> {{ end }}
+    </div>
 
     {{ if .Params.toc }}
-    <div class="toc">
+    <div>
       {{ .TableOfContents }}
     </div>
     {{ end }}
 
     {{ if .Params.series }}
-    <div class="series">
+    <div>
       This post is part of the
       {{ range .Params.series }}
       <a href="/series/{{ . | urlize }}">{{ . }}</a>
@@ -24,7 +26,10 @@
     {{ .Content }}
   </article>
   <div>
-    <a href="{{ .Permalink }}">Published <time class="dt-published">{{ .Params.date.Format "2 January, 2006" }}</time> by <a rel="author" href="{{ .Site.BaseURL }}author/{{urlize .Params.author}} ">{{ .Params.author }}</a>
+    Published <time>{{ .Params.date.Format "2 January, 2006" }}</time> by <a rel="author"
+      href="{{ .Site.BaseURL }}author/{{urlize .Params.author}} ">{{ .Params.author }}</a>
+  </div>
+  <div>
     Last modified on {{ .Lastmod.Format "2 January, 2006"}}.
   </div>
 </div>
