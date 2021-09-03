@@ -8,3 +8,5 @@ menu:
       url: /posts
     - name: Zettelkasten
       url: /zettelkasten
+    - name: Listen & Read 
+      url: /listenandread
