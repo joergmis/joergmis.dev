@@ -3,7 +3,7 @@ build:
   when: manual
   stage: build
   variables:
-    VERSION: 0.55.6
+    VERSION: 0.80.0
   script:
     - cd backlinker
     - go run main.go
