@@ -1,6 +1,8 @@
 build:
+  only:
+    refs:
+      - main
   image: golang:1.17-alpine
-  when: manual
   stage: build
   variables:
     VERSION: 0.80.0
@@ -19,7 +21,6 @@ build:
 
 deploy:
   image: ubuntu:latest
-  when: manual
   stage: deploy
   needs: [build]
   script:
