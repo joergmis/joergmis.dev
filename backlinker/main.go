@@ -67,7 +67,6 @@ func main() {
 		// create the backlink structs
 		backlinks := []backlink{}
 		for _, link := range links {
-			log.Println(link)
 			backlinks = append(backlinks, backlink{
 				Name: strings.Split(title, "\"")[1],
 				Path: link,

@@ -11,7 +11,7 @@ build:
     - apk --no-cache add curl
     - curl --location --output hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz"
     - tar -zxvf hugo.tar.gz
-    - hugo
+    - ./hugo
   artifacts:
     paths:
       - public/
