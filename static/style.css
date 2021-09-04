@@ -53,18 +53,26 @@ h1 {
   margin-top: 2rem;
 }
 
-h2, h3 {
-  font-size: 1.2rem;
+h2 {
+  font-size: 1.3rem;
   line-height: 1.1;
   font-family: FiraCode-Medium;
   margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.1;
+  font-family: FiraCode-Medium;
+  margin-top: 2rem;
+  text-transform: uppercase;
 }
 
 * {
   box-sizing: border-box;
 }
 
-*:selection {
+*::selection {
   background-color: yellow;
 }
 
@@ -102,6 +110,7 @@ a:hover {
 .toc {
   padding: 1rem; 
   margin: 1rem 0;
+  line-height: 1.5rem;
   font-size: 0.8rem;
   border: 1px solid gray;
   border-radius: 5px;
@@ -109,18 +118,27 @@ a:hover {
 
 .toc ul {
   list-style-type: none;
+}
+
+.toc ul ul {
+  padding-left: 1rem;
+}
+
+.toc nav > ul {
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .title {
   padding: 0 1rem 1rem 1rem; 
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0;
   border: 2px solid gray;
 }
 
 .modified {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 blockquote {

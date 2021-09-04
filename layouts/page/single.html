@@ -2,13 +2,8 @@
 
 <div>
   <article>
-    <div class="title">
+    <div>
       <h1>{{ .Title }}</h1>
-
-      {{ if .Params.tags }}
-      { {{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ strings.Replace . "@" "" }}</a> {{ end }} }<br/>
-      {{ end }}
-      {{ countwords .Content }} words - {{ math.Round (div (countwords .Content) 220.0) }} minute read
     </div>
 
     {{ if .Params.toc }}

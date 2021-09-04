@@ -4,6 +4,7 @@ date: "2021-09-04"
 lastmod: "2021-09-04"
 author: "joergmis"
 type: "blog"
+draft: yes
 series:
 - note taking system
 toc: yes
