@@ -13,3 +13,6 @@ Podcasts:
 - [Leading Agile](https://www.leadingagile.com/podcast/)
 
 Blogs:
+
+- [Alexey Shmalko](https://www.alexeyshmalko.com/)
+- [Edwin Wenink](https://www.edwinwenink.xyz/)
