@@ -7,8 +7,9 @@
 
       <h2>{{ .Params.tldr }}</h2>
       {{ if .Params.tags }}
-      { {{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ strings.Replace . "@" "" }}</a> {{ end }} } -
-      {{ end }} {{ countwords .Content }} words - {{ math.Round (div (countwords .Content) 220.0) }} minute read
+      { {{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ strings.Replace . "@" "" }}</a> {{ end }} }<br/>
+      {{ end }}
+      {{ countwords .Content }} words - {{ math.Round (div (countwords .Content) 220.0) }} minute read
     </div>
 
     {{ if .Params.toc }}
