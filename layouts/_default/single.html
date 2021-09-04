@@ -5,7 +5,6 @@
     <div class="title">
       <h1>{{ .Title }}</h1>
 
-      <h2>{{ .Params.tldr }}</h2>
       {{ if .Params.tags }}
       { {{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ strings.Replace . "@" "" }}</a> {{ end }} }<br/>
       {{ end }}
@@ -26,6 +25,12 @@
       {{ end }}
       series.</i>
     </div>
+    {{ end }}
+
+    {{ if .Params.tldr }}
+    {{ if gt (len .Params.tldr) 0 }}
+    <h2>tldr: {{ .Params.tldr }}</h2>
+    {{ end }}
     {{ end }}
 
     {{ .Content }}
