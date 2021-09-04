@@ -8,6 +8,7 @@ build:
     - cd backlinker
     - go run main.go
     - cd ..
+    - apk --no-cache add curl
     - curl --location --output hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz"
     - tar -zxvf hugo.tar.gz
     - hugo
@@ -18,6 +19,7 @@ build:
 
 deploy:
   image: ubuntu:latest
+  when: manual
   stage: deploy
   needs: [build]
   script:
