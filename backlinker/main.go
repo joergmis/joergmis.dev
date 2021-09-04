@@ -30,6 +30,7 @@ var (
 	titleExpression    *regexp.Regexp
 	markdownTemplate   *template.Template
 	backlinkTable      map[string][]string
+	titles             map[string]string
 )
 
 type backlink struct {
@@ -39,6 +40,7 @@ type backlink struct {
 
 func main() {
 	backlinkTable = make(map[string][]string)
+	titles = make(map[string]string)
 
 	backlinkExpression = regexp.MustCompile(`/zettelkasten/\S+\b`)
 	titleExpression = regexp.MustCompile(`title: \S+`)
@@ -49,6 +51,8 @@ func main() {
 		log.Fatal(err)
 	}
 
+	fmt.Printf("found %d files to add backlinks to.", len(backlinkTable))
+
 	for filepath, links := range backlinkTable {
 		f, err := os.OpenFile(path.Join("../content", fmt.Sprintf("%s.md", filepath)), os.O_APPEND|os.O_RDWR, 0644)
 		if err != nil {
@@ -56,19 +60,11 @@ func main() {
 		}
 		defer f.Close()
 
-		content, err := ioutil.ReadAll(f)
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		// get the title
-		title := titleExpression.FindString(string(content))
-
 		// create the backlink structs
 		backlinks := []backlink{}
 		for _, link := range links {
 			backlinks = append(backlinks, backlink{
-				Name: strings.Split(title, "\"")[1],
+				Name: strings.Split(titles[filepath], "\"")[1],
 				Path: link,
 			})
 		}
@@ -103,6 +99,7 @@ func walker(path string, info fs.FileInfo, err error) error {
 	}
 
 	for _, link := range backlinkExpression.FindAllString(string(content), -1) {
+		titles[link] = titleExpression.FindString(string(content))
 		backlinkTable[link] = append(backlinkTable[link], strings.TrimSuffix(strings.TrimPrefix(path, "../content"), ".md"))
 	}
 

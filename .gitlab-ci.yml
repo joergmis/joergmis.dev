@@ -1,11 +1,14 @@
 deploy:
+  image: golang:1.17-alpine
+  stage: deploy
+
   only:
     refs:
       - main
-  image: golang:1.17-alpine
-  stage: build
+
   variables:
     VERSION: 0.80.0
+
   script:
     - apk --no-cache add curl lftp
     - cd backlinker
@@ -15,6 +18,7 @@ deploy:
     - tar -zxvf hugo.tar.gz
     - ./hugo
     - lftp -e "open $FTP_HOST; user $FTP_USER $FTP_PW; mkdir -f staging; mirror -X .* -X .*/ --reverse --verbose --delete public/ httpdocs/; bye"
+
   environment:
     name: production
     url: https://ninetyfour.ch
