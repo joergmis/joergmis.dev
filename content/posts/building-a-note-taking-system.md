@@ -6,12 +6,10 @@ author: "joergmis"
 type: "blog"
 series:
 - note taking system
-toc:
-- Motivation
-- Tooling 
+toc: yes
 ---
 
-## Motivation
+## Intro
 
 During my education, particularly my computer science studies, I was playing
 around with different note-taking approaches. In the final year, I felt 
@@ -38,6 +36,17 @@ The benefits should be clear; you can add knowledge at all time. You can expand
 ideas, discover connections over other notes that you were not aware of. An 
 idea can span multiple notes (but does not have to) and you are able to 
 reference one part of the idea from another note.
+
+## Requirements
+
+In addition to the requirements mentioned above, there are a few technical
+requirements:
+
+- all content in plain text
+- easily searchable notes
+- no context-switching; navigating and creating notes from within the editor
+- system that works also online
+- content under version control
 
 ## Tooling
 
