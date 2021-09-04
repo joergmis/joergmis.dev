@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date.Format "2 January, 2006" }}
-lastmod: {{ .Date.Format "2 January, 2006" }}
+date: "{{ dateFormat "2006-01-02" .Date }}"
+lastmod: "{{ dateFormat "2006-01-02" .Date }}"
 author: "joergmis"
 type: "blog"
 ---

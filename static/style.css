@@ -7,122 +7,40 @@ colors
 #39918C
 
 */
-
 @font-face {
-  font-family: FiraSans-Black;
-  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+  font-family: FiraCode-Bold;
+  src: url(/fonts/FiraCode-Bold.ttf) format("truetype");
 }
-
 @font-face {
-  font-family: FiraSans-Black;
-  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+  font-family: FiraCode-Light;
+  src: url(/fonts/FiraCode-Light.ttf) format("truetype");
 }
-
 @font-face {
-  font-family: FiraSans-Black;
-  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+  font-family: FiraCode-Medium;
+  src: url(/fonts/FiraCode-Medium.ttf) format("truetype");
 }
-
 @font-face {
-  font-family: FiraSans-Black;
-  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+  font-family: FiraCode-Regular;
+  src: url(/fonts/FiraCode-Regular.ttf) format("truetype");
 }
-
 @font-face {
-  font-family: FiraSans-Black;
-  src: url(/fonts/FiraSans-Black.ttf) format("truetype");
+  font-family: FiraCode-SemiBold;
+  src: url(/fonts/FiraCode-SemiBold.ttf) format("truetype");
 }
-
-@font-face {
-  font-family: FiraSans-BlackItalic;
-  src: url(/fonts/FiraSans-BlackItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-Bold;
-  src: url(/fonts/FiraSans-Bold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-BoldItalic;
-  src: url(/fonts/FiraSans-BoldItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-ExtraBold;
-  src: url(/fonts/FiraSans-ExtraBold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-ExtraBoldItalic;
-  src: url(/fonts/FiraSans-ExtraBoldItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-ExtraLight;
-  src: url(/fonts/FiraSans-ExtraLight.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-ExtraLightItalic;
-  src: url(/fonts/FiraSans-ExtraLightItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-Italic;
-  src: url(/fonts/FiraSans-Italic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-Light;
-  src: url(/fonts/FiraSans-Light.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-LightItalic;
-  src: url(/fonts/FiraSans-LightItalic.ttf) format("truetype");
-}
-
 @font-face {
   font-family: FiraSans-Medium;
   src: url(/fonts/FiraSans-Medium.ttf) format("truetype");
 }
-
-@font-face {
-  font-family: FiraSans-MediumItalic;
-  src: url(/fonts/FiraSans-MediumItalic.ttf) format("truetype");
-}
-
 @font-face {
   font-family: FiraSans-Regular;
   src: url(/fonts/FiraSans-Regular.ttf) format("truetype");
 }
 
-@font-face {
-  font-family: FiraSans-SemiBold;
-  src: url(/fonts/FiraSans-SemiBold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-SemiBoldItalic;
-  src: url(/fonts/FiraSans-SemiBoldItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-Thin;
-  src: url(/fonts/FiraSans-Thin.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: FiraSans-ThinItalic;
-  src: url(/fonts/FiraSans-ThinItalic.ttf) format("truetype");
-}
-
 html, body {
   padding: 0;
   margin: 0;
-  font-family: FiraSans-Regular;
-  font-size: 1rem;
+  font-family: FiraCode-Regular;
+  font-size: 0.95rem;
   line-height: 1.5;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -131,14 +49,14 @@ html, body {
 h1 {
   font-size: 2rem;
   line-height: 1;
-  font-family: FiraSans-SemiBold;
+  font-family: FiraCode-SemiBold;
   margin-top: 2rem;
 }
 
 h2, h3 {
   font-size: 1.2rem;
   line-height: 1.1;
-  font-family: FiraSans-Medium;
+  font-family: FiraCode-Medium;
   margin-top: 2rem;
 }
 
@@ -146,12 +64,16 @@ h2, h3 {
   box-sizing: border-box;
 }
 
+*:selection {
+  background-color: yellow;
+}
+
 #__next {
   margin: 16px;
 }
 
 header, main {
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   padding: 0.5rem 2rem;
 }
@@ -170,5 +92,33 @@ code {
 }
 
 a {
-  color: #39918C;
+  color: black;
+}
+
+a:hover {
+  background-color: yellow;
+}
+
+.toc {
+  padding: 1rem; 
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  padding: 0 1rem 1rem 1rem; 
+  margin: 1rem 0;
+  border: 2px solid gray;
+}
+
+.modified {
+  margin-top: 2rem;
 }

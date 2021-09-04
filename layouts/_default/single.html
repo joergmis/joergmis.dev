@@ -2,32 +2,34 @@
 
 <div>
   <article>
-    <h1>{{ .Title }}</h1>
+    <div class="title">
+      <h1>{{ .Title }}</h1>
 
-    <h2>{{ .Params.tldr }}</h2>
-    <div>
-      {{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a> {{ end }}
+      <h2>{{ .Params.tldr }}</h2>
+      {{ if .Params.tags }}
+      { {{ range .Params.tags }} <a href="/tags/{{ . | urlize }}/">{{ strings.Replace . "@" "" }}</a> {{ end }} } -
+      {{ end }} {{ countwords .Content }} words - {{ math.Round (div (countwords .Content) 220.0) }} minute read
     </div>
 
     {{ if .Params.toc }}
-    <div>
+    <div class="toc">
       {{ .TableOfContents }}
     </div>
     {{ end }}
 
     {{ if .Params.series }}
-    <div>
-      This post is part of the
+    <div class="series">
+      <i>This post is part of the
       {{ range .Params.series }}
       <a href="/series/{{ . | urlize }}">{{ . }}</a>
       {{ end }}
-      series.
+      series.</i>
     </div>
     {{ end }}
 
     {{ .Content }}
   </article>
-  <div>
+  <div class="modified">
     <small>Published <time>{{ .Params.date.Format "2 January, 2006" }}</time> /
       last modified on <time>{{ .Lastmod.Format "2 January, 2006"}}</time>.</small>
   </div>
