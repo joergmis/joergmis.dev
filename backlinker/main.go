@@ -43,7 +43,7 @@ func main() {
 	titles = make(map[string]string)
 
 	backlinkExpression = regexp.MustCompile(`/zettelkasten/\S+\b`)
-	titleExpression = regexp.MustCompile(`title: \S+`)
+	titleExpression = regexp.MustCompile(`title: "((\S+)\s*)+"`)
 
 	markdownTemplate = template.Must(template.New("backlinks").Parse(backlinksTemplate))
 
