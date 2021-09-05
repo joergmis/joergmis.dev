@@ -10,30 +10,37 @@ colors
 @font-face {
   font-family: FiraCode-Bold;
   src: url(/fonts/FiraCode-Bold.ttf) format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: FiraCode-Light;
   src: url(/fonts/FiraCode-Light.ttf) format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: FiraCode-Medium;
   src: url(/fonts/FiraCode-Medium.ttf) format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: FiraCode-Regular;
   src: url(/fonts/FiraCode-Regular.ttf) format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: FiraCode-SemiBold;
   src: url(/fonts/FiraCode-SemiBold.ttf) format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: FiraSans-Medium;
   src: url(/fonts/FiraSans-Medium.ttf) format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: FiraSans-Regular;
   src: url(/fonts/FiraSans-Regular.ttf) format("truetype");
+  font-display: swap;
 }
 
 html, body {
