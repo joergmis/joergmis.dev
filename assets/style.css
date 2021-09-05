@@ -93,6 +93,10 @@ header, main {
   padding: 0.5rem 2rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 pre {
   background-color: #eee !important;
   color: black;

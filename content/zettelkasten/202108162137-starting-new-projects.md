@@ -6,6 +6,7 @@ author: "joergmis"
 type: "zettel"
 tldr: ""
 tags:
+- "@softwareengineering"
 - "@projectmanagement"
 - "@requirements"
 - "@mvp"

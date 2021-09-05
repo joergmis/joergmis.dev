@@ -2,7 +2,7 @@
 
 <div>
   <article>
-    {{ if .Title }}<h1>{{ .Title }}</h1>{{ end }}
+    {{ if .Title }}<h1>{{ humanize .Title }}</h1>{{ end }}
     {{ .Content }}
   </article>
 
