@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
 <div>
   <article>
@@ -32,11 +32,11 @@
 
     {{ .Content }}
   </article>
+
   <div class="modified">
     <small>Published <time>{{ .Params.date.Format "2 January, 2006" }}</time> /
       last modified on <time>{{ .Lastmod.Format "2 January, 2006"}}</time>.</small>
   </div>
-
 </div>
 
-{{ partial "footer.html" . }}
+{{ end }}

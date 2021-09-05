@@ -1,22 +1,19 @@
 deploy:
-  image: golang:1.17-alpine
+  image: golang:alpine
   stage: deploy
 
+  # only build on main branch
   only:
     refs:
       - main
 
-  variables:
-    VERSION: 0.80.0
-
   script:
-    - apk --no-cache add curl lftp
-    - cd backlinker
-    - go run main.go
-    - cd ..
-    - curl --location --output hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz"
-    - tar -zxvf hugo.tar.gz
+    # install hugo to generate the website
+    - go install github.com/gohugoio/hugo@latest
     - ./hugo --minify
+
+    # install lftp for the file transfer
+    - apk --no-cache add lftp
     - lftp -e "open $FTP_HOST; user $FTP_USER $FTP_PW; mkdir -f staging; mirror -X .* -X .*/ --reverse --verbose --delete public/ httpdocs/; bye"
 
   environment:

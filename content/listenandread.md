@@ -9,7 +9,7 @@ tldr:
 
 Books:
 
-- Deep Work by Cal Newport
+- [Deep Work by Cal Newport](/posts/deep-work-by-cal-newport)
 
 Podcasts:
 

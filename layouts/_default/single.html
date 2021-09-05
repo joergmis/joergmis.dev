@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
 <div>
   <article>
@@ -14,20 +14,18 @@
     {{ if .Params.toc }}
     {{ if gt (countwords .TableOfContents) 0 }}
     <div class="toc">
+      {{ if .Params.series }}
+      <i>This post is part of the
+        {{ range .Params.series }}
+        <a href="/series/{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+        series.</i>
+      {{ end }}
       {{ .TableOfContents }}
     </div>
     {{ end }}
     {{ end }}
 
-    {{ if .Params.series }}
-    <div class="series">
-      <i>This post is part of the
-      {{ range .Params.series }}
-      <a href="/series/{{ . | urlize }}">{{ . }}</a>
-      {{ end }}
-      series.</i>
-    </div>
-    {{ end }}
 
     {{ if .Params.tldr }}
     {{ if gt (len .Params.tldr) 0 }}
@@ -37,6 +35,7 @@
 
     {{ .Content }}
   </article>
+
   <div class="modified">
     <small>Published <time>{{ .Params.date.Format "2 January, 2006" }}</time> /
       last modified on <time>{{ .Lastmod.Format "2 January, 2006"}}</time>.</small>
@@ -44,4 +43,4 @@
 
 </div>
 
-{{ partial "footer.html" . }}
+{{ end }}

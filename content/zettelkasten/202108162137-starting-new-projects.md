@@ -19,7 +19,7 @@ where he talkes about what you should think about when starting a new project:
 
 - what problem are we solving?
 - who are the stakeholders?
-- what are the goals and especially [non-goals](/zettelkasten/202109042229-non-goals)?
+- what are the goals and especially [ non-goals ]( /zettelkasten/202109042229-non-goals )?
 - what's the minimum viable feature set?
 - how do we measure success?
 
