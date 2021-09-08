@@ -10,3 +10,5 @@ menu:
       url: /zettelkasten
     - name: Listen & Read 
       url: /listenandread
+    - name: Projects
+      url: /projects
