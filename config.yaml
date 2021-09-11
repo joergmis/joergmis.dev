@@ -2,6 +2,9 @@ baseURL: "https://ninetyfour.ch/"
 languageCode: "en-us"
 title: "tales of meandering code"
 
+params:
+  description: "Notes from the collision of code and reality."
+
 menu:
   main:
     - name: Blogposts

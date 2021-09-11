@@ -21,4 +21,9 @@ reading them).
 I'm also working on a blogpost which explains the motivation behind it and how
 I set it up with vim and hugo. Stay tuned :)
 
+A few tags to get you started:
+
+- [Software engineering](/tags/softwareengineering)
+- [Recipes](/tags/recipe)
+
 ## Index
