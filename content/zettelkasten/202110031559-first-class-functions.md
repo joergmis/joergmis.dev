@@ -230,7 +230,7 @@ func (m *Mux) SendMsg(msg string) error {
   m.mu.Lock()
   defer m.mu.Unlock()
   for _, conn := range m.conns {
-    err := io.WriteString(conn, msg)
+    _, err := io.WriteString(conn, msg)
     if err != nil {
       return err
     }
@@ -273,10 +273,10 @@ func (m *Mux) loop() {
     case conn := <-m.add:
       conns[conn.RemoteAddr()] = conn
     case addr := <-m.remove:
-      delete(m.conns, addr)
+      delete(conns, addr)
     case msg := <-m.sendMsg:
       for _, conn := range conns {
-        io.WriteString(conn, msg)
+        _, _ = io.WriteString(conn, msg)
       }
     }
   }
@@ -309,7 +309,7 @@ func (m *Mux) Remove(addr net.Addr) {
 func (m *Mux) SendMsg(msg string) error {
   m.ops <- func(m map[net.Addr]net.Conn) {
     for _, conn := range m {
-      io.WriteString(conn, msg)
+      _, _ = io.WriteString(conn, msg)
     }
   }
   return nil
@@ -317,7 +317,7 @@ func (m *Mux) SendMsg(msg string) error {
 
 func (m *Mux) loop() {
   conns := make(map[net.Addr]net.Conn)
-  for _, op := range m.ops {
+  for op := range m.ops {
     op(conns)
   }
 }
@@ -338,8 +338,8 @@ type Mux struct {
 func (m *Mux) SendMsg(msg string) error {
   result := make(chan error, 1)
   m.ops <- func(m map[net.Addr]net.Conn) {
-    for _, conn := range m.conns {
-      err := io.WriteString(conn, msg)
+    for _, conn := range m {
+      _, err := io.WriteString(conn, msg)
       if err != nil {
         result <- err
         return
@@ -353,7 +353,7 @@ func (m *Mux) SendMsg(msg string) error {
 
 func (m *Mux) loop() {
   conns := make(map[net.Addr]net.Conn)
-  for _, op := range m.ops {
+  for op := range m.ops {
     op(conns)
   }
 }
@@ -369,7 +369,8 @@ func (m *Mux) PrivateMsg(addr net.Addr, msg string) error {
   if conn == nil {
     return errors.Errorf("client %v not registered", addr)
   }
-  return io.WriteString(conn, msg)
+  _, err := io.WriteString(conn, msg)
+  return err
 }
 ```
 
