@@ -94,7 +94,8 @@ header, main {
 }
 
 img {
-  max-width: 100%;
+  max-width: 97%;
+  border-radius: 8px;
 }
 
 pre {
@@ -102,7 +103,7 @@ pre {
   color: black;
   padding: 8px;
   overflow: auto;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 code {
