@@ -1,7 +1,7 @@
 ---
 title: "First Class Functions"
 date: "2021-10-03"
-lastmod: "2021-10-03"
+lastmod: "2021-10-09"
 author: "joergmis"
 type: "zettel"
 tldr: ""
@@ -10,6 +10,7 @@ tags:
 - "@davecheney"
 - "@patterns"
 - "@softwareengineering"
+- "@talk"
 toc: yes
 ---
 
