@@ -14,12 +14,13 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
       <p className="max-w-2xl text-3xl tracking-wide leading-12">Archive</p>
 
-      <div className="md:grid grid-cols-3 gap-12 py-12">
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 py-12">
         {posts.map((post) => (
           <article key={post.slug} className="">
             <div className="space-y-3">
               <Link href={"/blog/" + post.slug}>
-                <h3 className="text-2xl">{post.title}</h3>
+                  <h3 className="text-2xl tracking-wide leading-8">
+                <h3 className="text-2xl"></h3>{post.title}</h3>
               </Link>
               <p className="text-xs text-gray-600">{post.date}</p>
               <p className="text-sm tracking-wide leading-6">{post.excerpt}</p>

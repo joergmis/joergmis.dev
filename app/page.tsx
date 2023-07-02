@@ -14,20 +14,20 @@ export default async function Home() {
       </Head>
 
       <div className="mb-16">
-        <p className="max-w-2xl text-3xl tracking-wide leading-12">
+        <p className="max-w-2xl text-3xl tracking-wide leading-10">
           Software Engineer based in Winterthur, CH. Currently working on an
           embedded project in the building automation space.
         </p>
       </div>
 
       <div className="">
-        <p>Latest posts</p>
+        <p className="text-sm">Latest posts</p>
 
-        <div className="grid md:grid-cols-3 gap-12 py-12">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 py-12">
           {posts.map((post) => (
             <article key={post.slug} className="">
               <div className="space-y-3">
-                <Link href={"/blog/" + post.slug} className="group">
+                <Link href={"/blog/" + post.slug}>
                   <h3 className="text-2xl tracking-wide leading-8">
                     {post.title}
                   </h3>
@@ -43,7 +43,7 @@ export default async function Home() {
           ))}
         </div>
 
-        <Link href={"/blog"} className="inline-flex text-sm items-center gap-x-2">
+        <Link href={"/blog"} className="inline-flex text-sm items-center gap-x-2 ">
           Archive
           <ArrowLongRightIcon className="h-5 w-5" aria-hidden="true" />
         </Link>

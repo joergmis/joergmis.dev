@@ -21,7 +21,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
       </Head>
 
       <div className="space-y-3">
-        <h1 className="max-w-2xl text-3xl tracking-wide leading-12">
+        <h1 className="max-w-xl text-3xl tracking-wide leading-12">
           {post.title}
         </h1>
         <p className="text-xs tracking-wide text-gray-600">{post.date}</p>
