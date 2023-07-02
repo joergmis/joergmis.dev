@@ -1,28 +1,38 @@
 import Head from "next/head";
-import { CMS_NAME } from "@/lib/constants";
 import PostType from "@/interfaces/post";
 import { getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdown";
 import PostBody from "@/components/post-body";
 import Layout from "@/components/layout";
+import Link from "next/link";
+import { ArrowLongLeftIcon } from "@heroicons/react/20/solid";
 
 export default async function Post({ params }: { params: { slug: string } }) {
   const post = (await getBlogPost({
     params: { slug: params.slug },
   })) as PostType;
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title}`;
 
   return (
     <Layout>
-      <article className="mb-32">
-        <Head>
-          <title>{title}</title>
-        </Head>
+      <Head>
+        <title>{title}</title>
+      </Head>
 
-        <h1 className="max-w-2xl text-3xl tracking-wide leading-12">{post.title}</h1>
-        <PostBody content={post.content} />
-      </article>
+      <div className="space-y-3">
+        <h1 className="max-w-2xl text-3xl tracking-wide leading-12">
+          {post.title}
+        </h1>
+        <p className="text-xs tracking-wide text-gray-600">{post.date}</p>
+      </div>
+
+      <PostBody content={post.content} />
+
+      <Link href={"/blog"} className="inline-flex text-sm items-center gap-x-2 mt-16">
+        <ArrowLongLeftIcon className="h-5 w-5" aria-hidden="true" />
+        Back to the archive
+      </Link>
     </Layout>
   );
 }

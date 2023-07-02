@@ -12,7 +12,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
         <title>Archive</title>
       </Head>
 
-      <p>Archive</p>
+      <p className="max-w-2xl text-3xl tracking-wide leading-12">Archive</p>
 
       <div className="md:grid grid-cols-3 gap-12 py-12">
         {posts.map((post) => (
@@ -22,7 +22,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
                 <h3 className="text-2xl">{post.title}</h3>
               </Link>
               <p className="text-xs text-gray-600">{post.date}</p>
-              <p className="text-sm">{post.excerpt}</p>
+              <p className="text-sm tracking-wide leading-6">{post.excerpt}</p>
             </div>
           </article>
         ))}
