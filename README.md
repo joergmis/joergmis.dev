@@ -1,11 +1,7 @@
 # website
 
-Personal notes. A place and collection for raw and unfinished thoughts as well
-as polished texts.
+Personal website and blog.
 
-The repo servers multiple purposes; to be a kind of backup, a way to present
-and navigate them online as well as offline (think of easily accessible as well
-as usable with the text editor).
+Inspiration and resources:
 
-The goal is also to keep it very lightweight and simple which means no 
-Javascript and only a minimal amount of CSS! :)
+- [nextjs blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
