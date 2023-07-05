@@ -15,7 +15,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div className={'min-h-screen max-w-6xl mx-auto ' + inter.className}>
       <div className="px-8 pb-8 md:px-32 md:pb-16">
-        <nav className="my-16">
+        <nav className="py-16">
           <Link href={"/"} className="">Mischa Jörg</Link>
         </nav>
         <main>{children}</main>
