@@ -1,0 +1,25 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Mischa Jörg"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  # logo = "img/logo.png"
+  # secondaryLogo = "img/secondary-logo.png"
+  # description = "My awesome website"
+  # copyright = "Copy, _right?_ :thinking_face:"
+
+[author]
+  name = "Mischa Jörg"
+  image = "profile.jpg"
+  headline = "Embedded Software Engineer"
+  # bio = ""
+  links = [
+     { github = "https://github.com/joergmis" },
+     { linkedin = "https://www.linkedin.com/in/mischa-j%C3%B6rg-87933b157/" },
+     { mastodon = "https://mas.to/@joergmis" },
+]
