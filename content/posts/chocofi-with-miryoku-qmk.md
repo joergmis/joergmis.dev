@@ -24,9 +24,17 @@ The second hint was from [a blog post from devctrl](https://devctrl.blog/posts/t
 This means that we have all the information to build the qmk firmware (I decided to go with the Miryoku layout for starters). Follow the steps [described in the miryoku repo](https://github.com/manna-harbour/miryoku_qmk/tree/miryoku/users/manna-harbour_miryoku) to setup/update the branches. Then, to compile the firmware, run:
 
 ```bash
-# uf2 is needed
-make clean crkbd:manna-harbour_miryoku:uf2 CONVERT_TO=rp2040_ce
+make clean \
+  crkbd:manna-harbour_miryoku:uf2 \
+  CONVERT_TO=rp2040_ce \
+  MIRYOKU_ALPHAS=QWERTZ
 ```
+
+Note that the switches out the alpha layer for QWERTZ. This is mainly due to the fact that my workflow includes many vim focused tools which use 'hjkl' to navigate. While in nvim it would be easily possible to adjust the keymappings, it's hard to adjust it in all other tools to have a consistent experience. That's why I decided to go for the QWERTZ layout for the moment.
+
+This also means that at least the normal character typing speed shouldn't be impacted as much compared to if I would switch to a whole new layout.
+
+To flash the keyboard:
 
 - start with one keyboard half and plug it in
 - press the reset button > 1s
